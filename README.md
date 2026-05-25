@@ -70,32 +70,6 @@ El proyecto debe incluir:
 
 ---
 
-## 7.1. Diagrama ER obligatorio
-
-El equipo debe entregar un archivo `ER.mermaid` en la raíz del proyecto con el diagrama entidad-relación del modelo implementado.
-
-Ejemplo de estructura (genérico, no relacionado con este proyecto):
-
-```mermaid
-erDiagram
-    autores {
-        int id PK
-        string nombre
-        string pais
-    }
-    libros {
-        int id PK
-        int id_autor FK
-        string titulo
-        decimal precio
-    }
-    autores ||--o{ libros : "escribe"
-```
-
-El diagrama debe reflejar las tablas y relaciones **reales** del proyecto del equipo.
-
----
-
 ## 8. Alcance limitado
 
 Para que el proyecto sea posible en dos semanas, **no se pide**:
