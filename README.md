@@ -74,29 +74,25 @@ El proyecto debe incluir:
 
 El equipo debe entregar un archivo `ER.mermaid` en la raíz del proyecto con el diagrama entidad-relación del modelo implementado.
 
-Ejemplo de estructura esperada:
+Ejemplo de estructura (genérico, no relacionado con este proyecto):
 
 ```mermaid
 erDiagram
-    peliculas {
+    autores {
         int id PK
+        string nombre
+        string pais
+    }
+    libros {
+        int id PK
+        int id_autor FK
         string titulo
-        string genero
-        int duracion
-    }
-    proyecciones {
-        int id PK
-        int id_pelicula FK
-        string sala
-        string horario
         decimal precio
-        int boletos_disponibles
-        int boletos_vendidos
     }
-    peliculas ||--o{ proyecciones : "tiene"
+    autores ||--o{ libros : "escribe"
 ```
 
-El diagrama debe reflejar todas las tablas y relaciones reales del proyecto.
+El diagrama debe reflejar las tablas y relaciones **reales** del proyecto del equipo.
 
 ---
 
