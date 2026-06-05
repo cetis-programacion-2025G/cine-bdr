@@ -1,11 +1,18 @@
 <?php
-function menuPeliculas(&$datos) {
-    $salir = false;
-    while (!$salir) {
-        limpiarPantalla();
-        echo "\n";
-        titulo("PELICULAS", 65);
-        echo str_repeat("─", 67) . "\n";
+function editarEquipo(&$datos) {
+    limpiarpantalla();
+    echo "\n";
+    titulo("EDITAR PELICULAS",67);
+    listarpeliculas($datos);
+    if (empty($datos[´peliculas'])) {
+        esperarEnter();
+        return;
+    }
+    $ids = array_column($datos['peliculas'], 'id');
+    echo "  (0para cancelar)\n";
+
+
+    
         echo " 1. Ver peliculas\n";
         echo " 2. Agregar pelicula\n";
         echo " 3. Editar pelicula\n";
