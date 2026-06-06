@@ -4,7 +4,7 @@ function editarEquipo(&$datos) {
     echo "\n";
     titulo("EDITAR PELICULAS",67);
     listarpeliculas($datos);
-    if (empty($datos[´peliculas'])) {
+    if (empty($datos['peliculas'])) {
         esperarEnter();
         return;
     }
@@ -38,7 +38,7 @@ function editarEquipo(&$datos) {
             case 4:
                 limpiarPantalla();
                 pantalla_eliminarPelicula($datos);
-                break;
+                break; 
             case 0:
                 $salir = true;
                 break;
